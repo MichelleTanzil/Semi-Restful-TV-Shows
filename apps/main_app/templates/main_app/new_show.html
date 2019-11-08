@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add New Show</title>
+  {%load static%}
+  <link rel="stylesheet" href="{% static 'main_app/css/new_show_styles.css' %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <h1 class="display-4 text-center">Add A New Show</h1>
+  <a href="/shows">Go Back</a>
+  <form action="/shows/create" method="POST" class="form-group">
+    {%csrf_token%}
+    <p>
+      <label for="title">Title</label>
+      <input id="whole-length" type="text" name="title">
+    </p>
+
+    <label for="network">Network</label>
+    <input type="text" name="network">
+
+    <label for="release_date">Release Date</label>
+    <input type="date" name="release_date">
+    <p>Description</p>
+    <textarea rows="4" cols="4" name="description" class="form-control"></textarea>
+    <button type="submit" class="btn btn-secondary">Create</button>
+  </form>
+</body>
+</html>

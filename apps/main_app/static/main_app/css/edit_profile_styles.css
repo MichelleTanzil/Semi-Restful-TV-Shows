@@ -1,0 +1,20 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn{
+  margin-top: 20px; 
+}
+
+#align-left{
+  display: flex; 
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.center{
+  text-align: center;
+}
+
